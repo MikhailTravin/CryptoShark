@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"500"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<div class="page__error error error-500">
+					<div class="error__container">
+						<div class="error__content">
+							<div class="error__title error-title-500">
+								<span>5</span>
+								<img class="error__image-500" data-src="../img/500.webp" srcset="../img/500.webp 1x, ../img/500@2x.webp 2x" alt="">
+								<span>0</span>
+							</div>
+							<h4>Упс! Что-то произошло не так :(</h4>
+							<a href="#" class="error__button button">На главную страницу</a>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

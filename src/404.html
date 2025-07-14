@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"404"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<div class="page__error error">
+					<div class="error__container">
+						<div class="error__content">
+							<div class="error__title">
+								<span>4</span>
+								<img class="error__image-404" data-src="../img/404.webp" srcset="../img/404.webp 1x, ../img/404@2x.webp 2x" alt="">
+								<span>4</span>
+							</div>
+							<h4>Страница не найдена</h4>
+							<a href="#" class="error__button button">На главную страницу</a>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
