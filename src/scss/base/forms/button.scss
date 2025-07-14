@@ -1,0 +1,24 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	position: relative;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: #6170ef;
+	border-radius: 8px;
+	padding: 16px 24px;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: math.div(16, 13);
+	letter-spacing: -0.005em;
+	color: $color_white;
+	font-family: $fontFamilyGolosText;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		background: #4b58c5;
+	}
+}

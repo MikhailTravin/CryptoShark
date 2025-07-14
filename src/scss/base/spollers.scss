@@ -1,0 +1,83 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+.spollers {
+	// .spollers__spoller
+	&__spoller {
+		&:last-child {
+			.spollers__title {
+				border-bottom: 2px solid transparent;
+			}
+		}
+	}
+	// .spollers__title
+	&__title {
+		width: 100%;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		border-bottom: 2px solid $color_grey_light;
+		padding: 12px 0px;
+		&::before {
+			background: $color_grey_light;
+			border-radius: 8px;
+			width: 32px;
+			height: 32px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: rotate(90deg);
+			font-size: 14px;
+			color: $mainColor;
+			padding: 12px 9px;
+			transition: all 0.3s ease 0s;
+		}
+		&._spoller-active {
+			&::before {
+				transform: rotate(-90deg);
+				background: $color_blue;
+				color: $color_white;
+			}
+		}
+	}
+	// .spollers__name
+	&__name {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: math.div(17, 14);
+		letter-spacing: -0.005em;
+		text-align: left;
+		margin: 0px 15px 0px 0px;
+		span {
+			font-weight: 500;
+			margin: 8px 0px 0px 0px;
+		}
+	}
+	// .spollers__body
+	&__body {
+		border-bottom: 2px solid $color_grey_light;
+		padding: 12px 0px;
+	}
+	// .spollers__items
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -9px -12px;
+	}
+	// .spollers__column
+	&__column {
+		padding: 9px 12px;
+	}
+	// .spollers__item
+	&__item {
+		span {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: math.div(17, 14);
+			letter-spacing: -0.005em;
+			color: $color_grey;
+		}
+	}
+}

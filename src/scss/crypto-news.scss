@@ -1,0 +1,547 @@
+//Криптоновости
+
+.page {
+	// .page__news-detailed
+	&__news-detailed {
+		padding: 24px 0px 48px 0px;
+		@media (max-width: $mobile) {
+			padding: 8px 0px 64px 0px;
+		}
+	}
+	// .page__crypto-news
+	&__crypto-news {
+		padding: 0px 0px 48px 0px;
+		@media (max-width: $mobile) {
+			padding: 0px 0px 36px 0px;
+		}
+	}
+}
+
+.main-crypto-news {
+	padding: 48px 0px 48px 0px;
+	@media (max-width: $tablet) {
+		padding: 48px 0px 64px 0px;
+	}
+	@media (max-width: $mobile) {
+		padding: 32px 0px 32px 0px;
+	}
+	// .main-crypto-news__container
+	&__container {
+		@media (max-width: $mobile) {
+			padding: 0px 0px 0px 0px;
+		}
+	}
+}
+
+.crypto-news {
+	// .crypto-news__container
+	&__container {
+		@media (max-width: $pc) {
+			padding: 0px 0px 0px 0px;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 0px 24px;
+		}
+	}
+	// .crypto-news__content
+	&__content {
+	}
+	// .crypto-news__title
+	&__title {
+		@media (max-width: $tablet) {
+			margin: 0px 0px 35px 24px;
+		}
+		@media (max-width: $mobileSmall) {
+			margin: 0px 0px 35px 0px;
+		}
+	}
+	&__wrapper {
+	}
+	// .crypto-news__slider
+	&__slider {
+		@media (max-width: 1392px) {
+			padding: 0px 24px;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 0px 0px 0px 0px;
+		}
+	}
+	// .crypto-news__slide
+	&__slide {
+		background: $color_white;
+		padding: 24px 13px 32px 13px;
+		&:first-child {
+			padding: 24px 13px 32px 24px;
+			border-radius: 18px 0px 0px 18px;
+		}
+		&:last-child {
+			padding: 24px 24px 32px 13px;
+			border-radius: 0px 18px 18px 0px;
+		}
+		@media (max-width: $mobileSmall) {
+			border-radius: 18px;
+			padding: 12px 12px 76px 12px;
+			box-shadow: inset 0px -2px 1px #e8eaef;
+			&:first-child {
+				padding: 12px 12px 76px 12px;
+				border-radius: 18px;
+			}
+			&:last-child {
+				padding: 12px 12px 76px 12px;
+				border-radius: 18px;
+			}
+		}
+	}
+	// .crypto-news__item
+	&__item {
+		display: block;
+		&:hover {
+			.item-crypto-news__title {
+				color: $color_blue;
+			}
+		}
+	}
+	// .crypto-news__dotts
+	&__dotts {
+		display: none;
+		@media (max-width: $mobileSmall) {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			position: relative;
+			bottom: 44px;
+			.swiper-pagination-bullet {
+				flex: 0 0 12px;
+				margin: 0px 8px 0px 0px;
+				position: relative;
+				transition: all 0.3s ease 0s;
+				background: $color_grey_light;
+				height: 12px;
+				border-radius: 50%;
+				cursor: pointer;
+				&:last-child {
+					margin: 0px 0px 0px 0px;
+				}
+			}
+			.swiper-pagination-bullet-active {
+				background: $color_blue;
+			}
+		}
+	}
+	// .crypto-news__content
+	&__content {
+		h1 {
+			margin: 0px 0px 48px 27px;
+			@media (max-width: $tablet) {
+				margin: 0px 0px 32px 0px;
+			}
+			@media (max-width: $mobile) {
+				margin: 0px 0px 32px 24px;
+			}
+		}
+	}
+	// .crypto-news__body
+	&__body {
+		background: $color_white;
+		box-shadow: inset 0px -2px 1px #e8eaef;
+		border-radius: 18px;
+		padding: 32px 24px;
+		@media (max-width: $mobile) {
+			border-radius: 18px 18px 0px 0px;
+		}
+	}
+	// .crypto-news__row
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -16px -13px;
+		@media (max-width: $tablet) {
+			margin: -16px;
+		}
+		@media (max-width: 700px) {
+			flex-direction: column;
+			margin: -16px 0px;
+		}
+	}
+	// .crypto-news__main-column
+	&__main-column {
+		flex: 1 1 100%;
+		padding: 16px 13px;
+		margin: 0px 0px 5px 0px;
+		@media (max-width: $tablet) {
+			margin: 0px 0px 0px 0px;
+			padding: 16px;
+		}
+		@media (max-width: 700px) {
+			flex: 1 1 auto;
+			padding: 13px 0px;
+		}
+		.crypto-news__item {
+			min-height: 463px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding: 32px;
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 70%;
+				background: linear-gradient(180deg, rgba(32, 33, 44, 0) 44.98%, rgba(32, 33, 44, 0.95) 67.79%);
+				z-index: 5;
+				border-radius: 18px;
+			}
+			@media (max-width: $tablet) {
+				min-height: 598px;
+			}
+			@media (max-width: $mobile) {
+				min-height: 463px;
+				padding: 18px;
+			}
+			@media (max-width: $mobileSmall) {
+				&::before {
+					content: "";
+					height: 100%;
+				}
+			}
+		}
+		.item-crypto-news__title {
+			font-family: $fontFamilyGolosText;
+			color: $color_white;
+			font-weight: 600;
+			max-width: 841px;
+			position: relative;
+			z-index: 7;
+			margin: 0px 0px 18px 0px;
+			font-size: 36px;
+			line-height: math.div(43, 36);
+			@media (max-width: $tablet) {
+				max-width: 401px;
+			}
+			@media (max-width: $mobile) {
+				font-size: 20px;
+				line-height: math.div(26, 20);
+				margin: 0px 0px 10px 0px;
+			}
+		}
+		.item-crypto-news__image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 18px;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 18px;
+			}
+		}
+	}
+	// .crypto-news__item
+	&__item {
+		position: relative;
+	}
+	// .crypto-news__column
+	&__column {
+		flex: 0 1 25%;
+		padding: 16px 13px;
+		@media (max-width: $pc) {
+			flex: 0 1 33.3333%;
+		}
+		@media (max-width: $tablet) {
+			flex: 0 1 50%;
+			padding: 16px;
+		}
+		@media (max-width: 700px) {
+			flex: 1 1 auto;
+			padding: 16px 0px;
+		}
+	}
+	// .crypto-news__button
+	&__button {
+		margin: 32px 0px 0px 0px;
+		background: rgba(97, 112, 239, 0.15);
+		width: 100%;
+		color: $color_blue;
+		padding: 18px 24px;
+		&:hover {
+			color: $color_white;
+			background: $color_blue;
+		}
+		@media (max-width: $tablet) {
+			margin: 64px 0px 0px 0px;
+		}
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+	}
+}
+
+.item-crypto-news {
+	h4 {
+		transition: all 0.3s ease 0s;
+		font-family: $fontFamilyGolosText;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: math.div(26, 20);
+		letter-spacing: -0.01em;
+		margin: 12px 0px 12px 0px;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		@media (max-width: $mobileSmall) {
+			margin: 18px 0px 12px 0px;
+		}
+	}
+	p {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: math.div(20, 14);
+		color: $color_grey;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	// .item-crypto-news__image
+	&__image {
+		margin: 0px 0px 26px 0px;
+		img {
+			width: 100%;
+			height: 207px;
+			object-fit: cover;
+			border-radius: 18px;
+		}
+		@media (max-width: $mobileSmall) {
+			margin: 0px 0px 18px 0px;
+			img {
+				height: 198px;
+			}
+		}
+	}
+	// .item-crypto-news__coins
+	&__coins {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -4px -8px;
+		@media (max-width: 375px) {
+			margin: -4px;
+		}
+	}
+	// .item-crypto-news__coin
+	&__coin {
+		flex: 0 1 auto;
+		padding: 4px 8px;
+		@media (max-width: 375px) {
+			padding: 4px;
+		}
+		span {
+			background: $color_grey_light;
+			border-radius: 8px;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: math.div(17, 14);
+			letter-spacing: -0.005em;
+			color: $color_grey;
+			padding: 11px 16px;
+			display: flex;
+		}
+	}
+	// .item-crypto-news__subtitle
+	&__subtitle {
+		display: flex;
+		position: relative;
+		z-index: 7;
+		h4 {
+			color: $color_white;
+			margin: 0px 10px 0px 0px;
+			@media (max-width: $mobile) {
+				font-size: 16px;
+				line-height: math.div(19, 16);
+			}
+		}
+	}
+	// .item-crypto-news__h4
+	&__h4 {
+		font-family: $fontFamilyGolosText;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: math.div(24, 20);
+		letter-spacing: -0.01em;
+		color: $color_grey;
+		@media (max-width: $mobile) {
+			font-size: 16px;
+			line-height: math.div(19, 16);
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+//Детальная новости
+
+.news-detailed {
+	// .news-detailed__container
+	&__container {
+		@media (max-width: $mobile) {
+			padding: 0px 0px 0px 0px;
+		}
+	}
+	// .news-detailed__content
+	&__content {
+		background: $color_white;
+		box-shadow: inset 0px -2px 1px #e8eaef;
+		border-radius: 18px;
+		@media (max-width: $mobile) {
+			border-radius: 18px 18px 0px 0px;
+		}
+	}
+	// .news-detailed__body
+	&__body {
+		padding: 32px;
+		border-bottom: 1px solid #f0f2f5;
+		@media (max-width: $mobile) {
+			padding: 32px 0px;
+			.item-crypto-news__coins {
+				@media (max-width: $mobile) {
+					padding: 0px 24px;
+				}
+			}
+		}
+		h1 {
+			max-width: 737px;
+			margin: 0px 0px 70px 0px;
+			font-weight: 600;
+			font-size: 36px;
+			line-height: math.div(43, 36);
+			letter-spacing: -0.01em;
+			@media (max-width: $tablet) {
+				margin: 0px 0px 32px 0px;
+			}
+			@media (max-width: $mobile) {
+				margin: 0px 24px 18px 24px;
+				font-size: 20px;
+				line-height: math.div(28, 20);
+			}
+			@media (max-width: $mobileSmall) {
+				max-width: 251px;
+			}
+		}
+		p {
+			max-width: 737px;
+			font-weight: 500;
+			font-size: 17px;
+			line-height: math.div(29, 17);
+			margin: 0px 0px 32px 0px;
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+			@media (max-width: $mobile) {
+				font-size: 15px;
+				line-height: math.div(24, 15);
+				margin: 0px 24px 32px 24px;
+				&:last-child {
+					margin: 0px 24px;
+				}
+			}
+		}
+		img {
+			display: block;
+			margin: 0px 0px 32px 0px;
+			max-width: 888px;
+			height: 468px;
+			object-fit: cover;
+			@media (max-width: $tablet) {
+				height: 345px;
+			}
+			@media (max-width: $mobile) {
+				max-width: 100%;
+				width: 100%;
+			}
+			@media (max-width: $mobileSmall) {
+				height: 198px;
+			}
+		}
+		blockquote {
+			display: flex;
+			background: rgba(97, 112, 239, 0.05);
+			border-radius: 8px;
+			padding: 24px 62px 24px 30px;
+			max-width: 770px;
+			margin: 0px 0px 24px 0px;
+			max-width: 737px;
+			font-weight: 500;
+			font-size: 17px;
+			line-height: math.div(29, 17);
+			margin: 0px 0px 32px 0px;
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+			&::before {
+				font-size: 32px;
+				color: $color_blue;
+				margin: 20px 20px 0px 0px;
+			}
+			@media (max-width: $tablet) {
+				padding: 24px 30px 24px 30px;
+				margin: 0px 0px 32px 0px;
+			}
+			@media (max-width: $mobile) {
+				margin: 0px 24px 24px 24px;
+				font-size: 15px;
+				line-height: math.div(24, 15);
+			}
+			@media (max-width: $mobileSmall) {
+				flex-direction: column;
+				padding: 30px 28px 18px 18px;
+				&::before {
+					margin: 0px 0px 25px 7px;
+				}
+			}
+		}
+	}
+	// .news-detailed__quotes
+	&__quotes {
+	}
+	// .news-detailed__item
+	&__item {
+	}
+	// .news-detailed__buttons
+	&__buttons {
+		padding: 24px 32px 32px 32px;
+		position: relative;
+		img {
+			position: absolute;
+			width: 41px;
+			height: 41px;
+			top: 10px;
+			left: 44px;
+			z-index: 4;
+		}
+		@media (max-width: $tablet) {
+			padding: 24px 32px 24px 32px;
+		}
+		@media (max-width: $mobile) {
+			padding: 24px;
+			img {
+				left: 36px;
+			}
+		}
+	}
+	// .news-detailed__button
+	&__button {
+		width: 231px;
+		padding: 20px;
+		position: relative;
+		z-index: 3;
+	}
+}

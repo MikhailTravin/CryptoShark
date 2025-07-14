@@ -1,0 +1,987 @@
+.page {
+	// .page__main-project
+	&__main-project {
+		padding: 48px 0px 48px 0px;
+		@media (max-width: $tablet) {
+			padding: 32px 0px 48px 0px;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 18px 0px 48px 0px;
+		}
+	}
+	// .page__crypto-review
+	&__crypto-review {
+		padding: 0px 0px 48px 0px;
+		@media (max-width: $mobile) {
+			padding: 0px 0px 73px 0px;
+		}
+	}
+	// .page__coins-treid
+	&__coins-treid {
+		position: relative;
+		padding: 0px 0px 100px 0px;
+		@media (max-width: $tablet) {
+			padding: 0px 0px 62px 0px;
+		}
+		@media (max-width: $mobile) {
+			padding: 0px 0px 56px 0px;
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.main-project {
+	// .main-project__container
+	&__container {
+	}
+	// .main-project__content
+	&__content {
+	}
+	// .main-project__body
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -12px -18px;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			margin: -12px 0px;
+		}
+	}
+	// .main-project__column
+	&__column {
+		flex: 0 1 33.3333%;
+		padding: 12px 18px;
+		@media (max-width: $pc) {
+			flex: 0 1 50%;
+		}
+		@media (max-width: $tablet) {
+			flex: 1 1 auto;
+			padding: 12px 0px;
+		}
+	}
+	// .main-project__item
+	&__item {
+		background: $color_white;
+		box-shadow: 0px 8px 24px 1px rgba(233, 233, 233, 0.84);
+		border-radius: 32px;
+		padding: 24px;
+		@media (max-width: $tablet) {
+			padding: 32px 24px;
+		}
+	}
+	// .main-project__button
+	&__button {
+		background: rgba(97, 112, 239, 0.15);
+		width: 100%;
+		color: $color_blue;
+		padding: 18px 24px;
+		margin: 18px 0px 0px 0px;
+		&:hover {
+			color: $color_white;
+			background: $color_blue;
+		}
+		@media (max-width: $mobileSmall) {
+			margin: 12px 0px 0px 0px;
+			font-size: 14px;
+			line-height: math.div(20, 14);
+		}
+	}
+}
+
+.item-main-project {
+	// .item-main-project__nav
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0px 0px 12px 0px;
+		@media (max-width: $tablet) {
+			align-items: flex-start;
+		}
+		@media (max-width: $mobileSmall) {
+			margin: 0px 0px 6px 0px;
+		}
+	}
+	// .item-main-project__title
+	&__title {
+		flex: 0 0 50%;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: math.div(24, 20);
+		letter-spacing: -0.01em;
+		font-family: $fontFamilyGolosText;
+		white-space: nowrap;
+	}
+	// .item-main-project__subtitles
+	&__subtitles {
+		flex: 0 1 50%;
+		display: flex;
+		margin: 0px -7px;
+		padding: 0px 10px;
+		@media (max-width: $tablet) {
+			margin: 23px -7px 0px -7px;
+			padding: 0px 50px 0px 12px;
+		}
+		@media (max-width: $mobile) {
+			padding: 0px 12px;
+		}
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+	}
+	// .item-main-project__subtitle
+	&__subtitle {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: math.div(16, 13);
+		text-align: center;
+		padding: 0px 7px;
+		flex: 1 1 auto;
+		&:nth-child(2) {
+			padding: 0px 5px 0px 7px;
+		}
+		@media (max-width: $tablet) {
+			text-align: left;
+		}
+	}
+	// .item-main-project__content
+	&__content {
+		border-bottom: 1px solid #f0f2f5;
+		padding: 12px 0px;
+		display: flex;
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+			padding: 18px 0px;
+		}
+	}
+	// .item-main-project__left
+	&__left {
+		display: flex;
+		align-items: center;
+		flex: 1 0 50%;
+		@media (max-width: $mobileSmall) {
+			flex: 1 1 auto;
+			margin: 0px 0px 16px 0px;
+		}
+	}
+	// .item-main-project__image
+	&__image {
+		margin: 0px 10px 0px 0px;
+		img {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+		}
+	}
+	// .item-main-project__desc
+	&__desc {
+	}
+	// .item-main-project__name
+	&__name {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: math.div(22, 18);
+		letter-spacing: -0.02em;
+		margin: 0px 0px 2px 0px;
+	}
+	// .item-main-project__subname
+	&__subname {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: math.div(16, 13);
+	}
+	// .item-main-project__numbers
+	&__numbers {
+		flex: 0 0 45%;
+		display: flex;
+		align-items: center;
+		padding: 0px 12px 0px 10px;
+		@media (max-width: $mobileSmall) {
+			justify-content: start;
+			padding: 0px 0px 0px 0px;
+		}
+	}
+	// .item-main-project__number
+	&__number {
+		padding: 0px 32px 0px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		&:last-child {
+			padding: 0px 0px 0px 0px;
+		}
+		span {
+			display: none;
+		}
+		@media (max-width: $pc) {
+			flex: 1 1 auto;
+			justify-content: start;
+			padding: 0px 0px 0px 0px;
+		}
+		@media (max-width: $tablet) {
+			flex: 1 1 auto;
+			&:last-child {
+				margin: 0px 40px 0px 0px;
+			}
+		}
+		@media (max-width: $mobile) {
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 0 1 auto;
+			align-items: center;
+			justify-content: start;
+			margin: 0px 32px 0px 0px;
+			padding: 0px 10px 0px 0px;
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+			span {
+				display: block;
+				font-weight: 500;
+				font-size: 12px;
+				line-height: math.div(15, 12);
+				letter-spacing: -0.5px;
+				margin: 0px 0px 0px 6px;
+			}
+		}
+	}
+	// .item-main-project__number
+	&__num {
+		font-family: $fontFamilyGolosText;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: math.div(19, 16);
+		text-align: center;
+		letter-spacing: -0.01em;
+		background: rgba(39, 181, 16, 0.1);
+		border-radius: 8px;
+		padding: 8px;
+	}
+	// .item-main-project__diagrams
+	&__diagrams {
+		flex: 0 1 50%;
+		display: flex;
+		padding: 0px 30px 0px 13px;
+		margin: -7px;
+		@media (max-width: $tablet) {
+			padding: 0px 77px 0px 18px;
+		}
+		@media (max-width: $mobile) {
+			padding: 0px 30px 0px 18px;
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 1 1 auto;
+			padding: 0px 0px 0px 0px;
+			margin: 0px -10px;
+		}
+	}
+	// .item-main-project__diagram
+	&__diagram {
+		flex: 0 1 33.3333%;
+		padding: 7px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:nth-child(3) {
+			padding: 7px 7px 7px 10px;
+		}
+		span {
+			display: none;
+		}
+		@media (max-width: $tablet) {
+			justify-content: start;
+		}
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+			flex: 0 1 auto;
+			padding: 0px 10px;
+			span {
+				font-weight: 500;
+				font-size: 12px;
+				line-height: math.div(15, 12);
+				letter-spacing: -0.5px;
+				display: block;
+				margin: 4px 0px 0px 0px;
+			}
+			&:nth-child(3) {
+				padding: 0px 10px;
+			}
+		}
+	}
+	// .item-main-project__diagram-inner
+	&__diagram-inner {
+		--percentage: 40;
+		--border-thickness: 4px;
+		--main-color: #27b510;
+		--w: 40px;
+		height: 40px;
+		width: var(--w);
+		aspect-ratio: 1;
+		position: relative;
+		display: inline-grid;
+		place-content: center;
+		font-family: sans-serif;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: math.div(28, 20);
+		text-align: center;
+		letter-spacing: -0.01em;
+		font-family: $fontFamilyManrope;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			border-radius: 50%;
+			--mask-image: radial-gradient(farthest-side, #0000 calc(99% - var(--border-thickness)), #000 calc(100% - var(--border-thickness)));
+			-webkit-mask: var(--mask-image);
+			mask: var(--mask-image);
+			background: radial-gradient(farthest-side, var(--main-color) 98%, #0000) top/var(--border-thickness) var(--border-thickness) no-repeat, conic-gradient(#edf0f3 calc(100% - var(--percentage, 0) * 2%), var(--main-color) calc(100% - var(--percentage, 0) * 2%));
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			inset: calc(50% - var(--border-thickness) / 1.9);
+			background: var(--main-color);
+			transform: rotate(calc(var(--percentage, 0) * -7.2deg)) translateY(calc(50% - var(--w) / 2));
+		}
+	}
+}
+
+.main-project-number {
+	.item-main-project__title {
+		flex: 0 0 65%;
+	}
+	.item-main-project__subtitles {
+		flex: 0 0 45%;
+	}
+	.item-main-project__subtitle {
+		text-align: left;
+	}
+	.item-main-project__left {
+		flex: 0 0 65%;
+	}
+}
+
+.main-project-green {
+	color: #27b510;
+}
+.main-project-grey {
+	color: $color_grey;
+	background: #f0f2f5;
+}
+
+.subname-start {
+}
+.subname-finish {
+	color: $color_grey;
+}
+.subname-active {
+	color: #27b510;
+}
+
+//========================================================================================================================================================
+
+//Криптообзор
+
+.crypto-review {
+	// .crypto-review__container
+	&__container {
+	}
+	// .crypto-review__content
+	&__content {
+	}
+	// .crypto-review__title
+	&__title {
+	}
+	// .crypto-review__body
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -6px;
+		@media (max-width: $tablet) {
+			margin: -12px;
+		}
+		@media (max-width: $mobile) {
+			margin: -12px 0px;
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			flex-wrap: nowrap;
+		}
+	}
+	// .crypto-review__row
+	&__row {
+		display: flex;
+	}
+	// .crypto-review__column
+	&__column {
+		flex: 1 1 24%;
+		padding: 6px;
+		@media (max-width: $pc) {
+			flex: 0 1 33.333%;
+		}
+		@media (max-width: 1200px) {
+			flex: 0 1 50%;
+		}
+		@media (max-width: $tablet) {
+			padding: 12px;
+		}
+		@media (max-width: $mobile) {
+			flex: 1 1 auto;
+			padding: 12px 0px;
+		}
+	}
+	// .crypto-review__item
+	&__item {
+		background: $color_white;
+		box-shadow: inset 0px -3px 1px #e8eaef;
+		border-radius: 18px;
+		height: 100%;
+	}
+}
+
+.crypto-review-column-width {
+	flex: 0 1 372px;
+	@media (max-width: $pc) {
+		flex: 0 1 33.3333%;
+	}
+	@media (max-width: 1200px) {
+		flex: 0 1 50%;
+	}
+}
+
+.item-crypto-review {
+	// .item-crypto-review__top
+	&__top {
+		font-family: $fontFamilyGolosText;
+		padding: 24px 24px 18px 24px;
+		border-bottom: 2px solid #f0f2f5;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: math.div(24, 20);
+		letter-spacing: -0.01em;
+		display: flex;
+		&::before {
+			width: 24px;
+			height: 24px;
+			font-size: 17px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0px 5px 0px 0px;
+			color: $color_grey;
+		}
+	}
+	// .item-crypto-review__fear-index
+	&__fear-index {
+		padding: 32px 24px 0px 24px;
+		@media (max-width: $mobile) {
+			padding: 24px 24px 0px 24px;
+		}
+		@media (max-width: 375px) {
+			padding: 24px 22px 0px 24px;
+		}
+	}
+	// .item-crypto-review__coins
+	&__coins {
+		padding: 0px 0px 14px 24px;
+		@media (max-width: $mobile) {
+			padding: 0px 0px 8px 24px;
+		}
+	}
+	// .item-crypto-review__block
+	&__block {
+		display: flex;
+		padding: 12px 24px 32px 24px;
+		@media (max-width: $mobile) {
+			padding: 12px 24px 24px 24px;
+		}
+	}
+}
+
+.block-crypto-review {
+	// .block-crypto-review__column
+	&__column {
+		flex: 1 1 50%;
+		display: flex;
+	}
+	// .block-crypto-review__border
+	&__border {
+		border-right: 2px solid #f0f2f5;
+		padding: 0px 0px 0px 24px;
+		margin: 0px 24px 0px 0px;
+	}
+	// .block-crypto-review__item
+	&__item {
+	}
+	// .block-crypto-review__title
+	&__title {
+		font-family: $fontFamilyGolosText;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: math.div(34, 28);
+		letter-spacing: -0.01em;
+		margin: 0px 0px 6px 0px;
+		@media (max-width: $mobile) {
+			font-size: 24px;
+			line-height: math.div(28, 24);
+			margin: 0px 0px 8px 0px;
+		}
+	}
+	// .block-crypto-review__subtitle
+	&__subtitle {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: math.div(20, 14);
+	}
+}
+.block-crypto-review-green {
+	color: #27b510;
+}
+.block-crypto-review-red {
+	color: #ff5b65;
+}
+
+//Индекс страха
+.fear-index {
+	// .fear-index__desc
+	&__desc {
+		display: flex;
+		margin: 0px 0px 32px 0px;
+		@media (max-width: $mobile) {
+			margin: 0px 0px 18px 0px;
+		}
+	}
+	// .fear-index__column
+	&__column {
+		flex: 1 1 auto;
+		border-right: 2px solid #f0f2f5;
+		padding: 0px 8px 0px 18px;
+		&:first-child {
+			padding: 0px 8px 0px 0px;
+		}
+		&:last-child {
+			padding: 0px 0px 0px 17px;
+		}
+		&:last-child {
+			border-right: none;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 0px 8px 0px 10px;
+			&:first-child {
+				padding: 0px 8px 0px 0px;
+			}
+			&:last-child {
+				padding: 0px 0px 0px 10px;
+			}
+		}
+		@media (max-width: 375px) {
+			padding: 0px 5px 0px 5px;
+			min-height: 80px;
+			&:first-child {
+				padding: 0px 5px 0px 0px;
+			}
+			&:last-child {
+				padding: 0px 0px 0px 5px;
+			}
+		}
+	}
+	// .fear-index__title
+	&__title {
+		font-family: $fontFamilyGolosText;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: math.div(19, 16);
+		letter-spacing: -0.01em;
+		margin: 0px 0px 10px 0px;
+	}
+	// .fear-index__subtitle
+	&__subtitle {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: math.div(16, 13);
+	}
+	// .fear-index__chart-skills
+	&__chart-skills {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+	}
+}
+
+.chart-skills {
+	// .chart-skills__image
+	&__image {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		height: 130px;
+		width: 256px;
+		img {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 0px);
+			height: 159px;
+		}
+		@media (max-width: 375px) {
+			height: 120px;
+			width: 200px;
+			img {
+				height: 147px;
+			}
+		}
+	}
+	// .chart-skills__title
+	&__title {
+		position: relative;
+		font-family: $fontFamilyGolosText;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: math.div(19, 16);
+		text-align: center;
+		letter-spacing: -0.01em;
+		color: #ff5b65;
+		max-width: 130px;
+		margin: 0px 0px 8px 0px;
+	}
+	// .chart-skills__line
+	&__line {
+		position: absolute;
+		background: #ffffff;
+		box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+		border-radius: 32px;
+		transform: rotate(36.5deg);
+		width: 38.87px;
+		height: 6px;
+		left: -10px;
+		bottom: 50px;
+		@media (max-width: 375px) {
+			left: -30px;
+		}
+	}
+	// .chart-skills__index
+	&__index {
+		position: relative;
+		font-family: $fontFamilyGolosText;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: math.div(20, 16);
+		text-align: center;
+		letter-spacing: -0.01em;
+		margin: 0px 0px 12px 0px;
+		span {
+			font-size: 20px;
+			line-height: math.div(24, 20);
+			color: #ff5b65;
+		}
+	}
+}
+
+//Монеты
+.coins-crypto-review {
+	// .coins-crypto-review__column
+	&__column {
+		display: flex;
+		justify-content: space-between;
+		padding: 8px 0px 8px 0px;
+		border-bottom: 2px solid #f0f2f5;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	// .coins-crypto-review__left
+	&__left {
+		flex: 0 1 50%;
+		display: flex;
+		align-items: center;
+	}
+	// .coins-crypto-review__image
+	&__image {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		margin: 0px 10px 0px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .coins-crypto-review__desc
+	&__desc {
+	}
+	// .coins-crypto-review__name
+	&__name {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: math.div(20, 14);
+		margin: 0px 0px 1px 0px;
+	}
+	// .coins-crypto-review__subname
+	&__subname {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: math.div(16, 13);
+		color: $color_grey;
+	}
+	// .coins-crypto-review__right
+	&__right {
+		flex: 0 1 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: left;
+		padding: 0px 22px 0px 0px;
+	}
+	// .coins-crypto-review__sum
+	&__sum {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: math.div(20, 14);
+		margin: 0px 0px 3px 0px;
+	}
+	// .coins-crypto-review__procent
+	&__procent {
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: math.div(16, 13);
+		text-align: right;
+		color: #27b510;
+		&::before {
+			font-size: 6px;
+			transform: rotate(-180deg);
+			margin: 1px 3px 0px 0px;
+		}
+	}
+}
+
+.coins-orange {
+	background: #f7931a;
+	img {
+		height: 20px;
+	}
+}
+.coins-blue {
+	background: linear-gradient(180deg, #4a819f 0%, #034681 100%);
+	img {
+		height: 30px;
+	}
+}
+.coins-light-blue {
+	background: #1273bf;
+	img {
+		height: 30px;
+	}
+}
+.coins-grey {
+	background: #d9d9d9;
+	overflow: hidden;
+	img {
+		height: 32px;
+	}
+}
+
+//========================================================================================================================================================
+
+//Монеты в тренде
+
+.coins-treid {
+	// .coins-treid__container
+	&__container {
+		@media (max-width: $pc) {
+			padding: 0px 0px 0px 0px;
+		}
+	}
+	// .coins-treid__content
+	&__content {
+	}
+	// .coins-treid__title
+	&__title {
+		margin: 0px 0px 30px 20px;
+		@media (max-width: $tablet) {
+			margin: 0px 0px 30px 24px;
+		}
+	}
+	// .coins-treid__scroll
+	&__scroll {
+		min-width: 100%;
+		overflow: auto;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	// .coins-treid__body
+	&__body {
+		display: flex;
+		position: relative;
+		margin: 87px -10px 0px -10px;
+		@media (max-width: 1392px) {
+			padding: 0px 24px;
+		}
+		@media (max-width: $mobile) {
+			margin: 25px -10px 0px -10px;
+		}
+	}
+	// .coins-treid__bg
+	&__bg {
+		position: absolute;
+		top: 70px;
+		left: 0;
+		width: 100%;
+		height: 181px;
+		object-fit: cover;
+		img {
+			position: absolute;
+			top: 0px;
+			left: 0;
+			width: 100%;
+			height: 181px;
+			object-fit: cover;
+		}
+		@media (max-width: $mobile) {
+			height: 187px;
+			img {
+				height: 187px;
+			}
+		}
+	}
+	// .coins-treid__column
+	&__column {
+		flex: 0 0 16.666%;
+		padding: 0px 10px;
+		min-width: 215px;
+		@media (max-width: 1392px) {
+			min-width: 235px;
+		}
+	}
+	// .coins-treid__item
+	&__item {
+		background: $color_white;
+		box-shadow: inset 0px -3px 1px #e8eaef;
+		border-radius: 18px;
+		padding: 18px 24px;
+		min-height: 186px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+}
+
+.item-coins-treid {
+	.coins-orange {
+		img {
+			margin: 0px 0px 0px -3px;
+		}
+	}
+	.coins-blue {
+		img {
+			height: 44px;
+		}
+	}
+	// .item-coins-treid__content
+	&__content {
+		flex: 1 1 auto;
+		margin: 0px 0px 33px 0px;
+	}
+	// .item-coins-treid__top
+	&__top {
+	}
+	// .item-coins-treid__image
+	&__image {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0px 0px 8px 0px;
+		img {
+			height: 30px;
+		}
+	}
+	// .item-coins-treid__desc
+	&__desc {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 0px 0px 6px 0px;
+	}
+	// .item-coins-treid__name
+	&__name {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: math.div(20, 14);
+		margin: 0px 4px 0px 0px;
+	}
+	// .item-coins-treid__subname
+	&__subname {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: math.div(16, 13);
+		color: $color_grey;
+	}
+	// .item-coins-treid__center
+	&__center {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	// .item-coins-treid__sum
+	&__sum {
+		font-family: $fontFamilyGolosText;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: math.div(19, 16);
+		letter-spacing: -0.01em;
+		margin: 0px 6px 0px 0px;
+	}
+	// .item-coins-treid__procent
+	&__procent {
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: math.div(16, 13);
+		color: #27b510;
+		&::before {
+			transform: rotate(-180deg);
+			font-size: 6px;
+			margin: 1px 3px 0px 0px;
+		}
+	}
+	// .item-coins-treid__bottom
+	&__bottom {
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: math.div(16, 13);
+		color: $color_grey;
+		&::before {
+			font-size: 16px;
+			margin: 0px 4px 0px 0px;
+		}
+	}
+}
+
+.coins-crypto-review-down {
+	color: #ff5b65;
+	&::before {
+		transform: rotate(0deg);
+		margin: 3px 3px 0px 0px;
+	}
+}

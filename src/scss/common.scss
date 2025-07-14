@@ -1,0 +1,120 @@
+.title {
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-family: $fontFamilyGolosText;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+	line-height: math.div(29, 24);
+	letter-spacing: -0.01em;
+	margin: 0px 0px 35px 27px;
+	img {
+		margin: 0px 8px 0px 0px;
+	}
+	@media (max-width: $tablet) {
+		margin: 0px 0px 35px 0px;
+	}
+}
+
+h1 {
+	font-family: $fontFamilyGolosText;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: math.div(29, 24);
+	letter-spacing: -0.01em;
+}
+
+h4 {
+	font-family: $fontFamilyGolosText;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: math.div(24, 20);
+	letter-spacing: -0.01em;
+	@media (max-width: $tablet) {
+		font-size: 24px;
+		line-height: math.div(29, 24);
+	}
+	@media (max-width: $mobile) {
+		font-size: 20px;
+		line-height: math.div(24, 20);
+	}
+}
+
+h5 {
+	font-family: $fontFamilyGolosText;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: math.div(19, 16);
+	letter-spacing: -0.01em;
+}
+
+//========================================================================================================================================================
+
+//Хлебные крошки
+.breadcrambs {
+	margin: 34px 0px 0px 0px;
+	@media (max-width: $tablet) {
+		margin: 32px 0px 0px 0px;
+	}
+	// .breadcrambs__container
+	&__container {
+		padding: 0px 0px 0px 16px;
+	}
+	// .breadcrambs__content
+	&__content {
+		ul {
+			padding: 0px 16px 0px 35px;
+			display: flex;
+			flex-wrap: nowrap;
+			overflow: auto;
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			@media (max-width: $tablet) {
+				padding: 0px 16px 0px 0px;
+			}
+			li {
+				a {
+					white-space: nowrap;
+					display: flex;
+					flex-wrap: nowrap;
+					align-items: center;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: math.div(20, 14);
+					color: $color_grey;
+					transition: all 0.3s ease 0s;
+					span {
+						&::before {
+							font-size: 12px;
+							color: $color_grey;
+						}
+						&:first-child {
+							margin: 0px 2px 0px 9px;
+						}
+						&:last-child {
+							margin: 0px 9px 0px 0px;
+						}
+					}
+					&:hover {
+						color: $color_blue;
+						span {
+							&::before {
+								color: $color_blue;
+							}
+						}
+					}
+				}
+				span {
+					white-space: nowrap;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: math.div(20, 14);
+				}
+			}
+		}
+	}
+}

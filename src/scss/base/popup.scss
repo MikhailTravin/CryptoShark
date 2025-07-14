@@ -1,0 +1,124 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+.popup-show body::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+}
+.popup_show {
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	visibility: hidden;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: transparent;
+	width: 100%;
+	max-width: 985px;
+	.lock & {
+		visibility: visible;
+	}
+}
+
+.popup__close {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin: 10px 0px;
+	&::before {
+		font-size: 25px;
+		color: $color_white;
+	}
+}
+
+.popup {
+	// .popup__body
+	&__body {
+		cursor: pointer;
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 500px;
+		object-fit: cover;
+		@media (max-width: $tablet) {
+			height: 362px;
+			margin: 0px 8px 8px 8px;
+		}
+		@media (max-width: $mobile) {
+			margin: 0px 0px 0px 0px;
+			height: 256px;
+		}
+	}
+	// .popup__button
+	&__button {
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 72px;
+		height: 72px;
+		border-radius: 50%;
+		background: $color_white;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&::before {
+			font-size: 23px;
+			margin: 3px 0px 0px 4px;
+		}
+		&._active {
+			display: none;
+		}
+	}
+	// .popup__video-item
+	&__video-item {
+		position: absolute;
+		top: 0;
+		right: 0;
+		object-fit: cover;
+		cursor: pointer;
+		width: 100%;
+		height: 100%;
+		border-radius: 18px;
+	}
+}
