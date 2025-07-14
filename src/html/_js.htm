@@ -1,0 +1,64 @@
+<script src="js/app.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+	const ctx = document.getElementById('myChart');
+	if(ctx){
+   var oilData = {
+    datasets: [
+        {
+            data: [6, 5, 10, 13, 20, 6, 17, 20, 3],
+    	  barPercentage: 1,
+		  categoryPercentage: 1,
+    	  backgroundColor: [
+      	'rgb(255, 175, 54)',
+      	'rgb(222, 200, 0)',
+      	'rgb(132, 103, 169)',
+			'rgb(39, 181, 16)',
+			'rgb(255, 91, 101)',
+			'rgb(32, 33, 44)',
+			'rgb(128, 193, 255)',
+			'rgb(153, 157, 237)',
+			'rgb(216, 35, 46)',
+    	],
+		borderWidth: 0,
+        }]
+   };
+	var chartOptions = {
+  		cutout: 80,
+	};
+	var pieChart = new Chart(ctx, {
+  		type: 'doughnut',
+  		data: oilData,
+  		options: chartOptions
+	});
+}
+
+	var semicircle = document.getElementById("semicircle");
+	if(semicircle){
+	var circleData = {
+    datasets: [
+        {
+            data: [50, 100],
+            backgroundColor: [
+               "rgb(97, 112, 239)",
+					"rgba(148, 155, 169, 0.5)",
+            ],
+            borderWidth: 0,
+				lineTension: 20,
+        }]
+};
+
+var circleOptions = {
+      cutout: 60,
+		circumference: 180,
+		rotation: -180,
+};
+
+var circleChart = new Chart(semicircle, {
+  type: 'doughnut',
+  data: circleData,
+  options: circleOptions
+});
+};
+</script>
